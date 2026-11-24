@@ -50,7 +50,7 @@ RTX 3050 Ti Laptop GPU (4GB). Full report with every table: [results/report.md](
 
 ### Chatbot
 
-![Chatbot screenshot](docs/chat_screenshot.jpg)
+![Chatbot screenshot](docs/screenshot.png)
 
 ## How it works
 
