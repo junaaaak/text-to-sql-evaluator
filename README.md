@@ -54,18 +54,7 @@ RTX 3050 Ti Laptop GPU (4GB). Full report with every table: [results/report.md](
 
 ## How it works
 
-```
-questions.jsonl ─┐
-schema ──────────┼─► prompt builder (3 styles) ─► Ollama model ─► SQL extractor
-                 │                                                    │
-                 │          school.db (read-only, timeout)            ▼
-                 └─ gold SQL ─────────────► grader ◄────────── predicted SQL
-                                              │
-                         correct / wrong_result / syntax_error /
-                         schema_error / execution_error / timeout / no_sql
-                                              ▼
-                               results/*.jsonl ─► analysis ─► report.md + charts
-```
+![Pipeline architecture](docs/architecture.png)
 
 **Database** (`data/schema.sql`, `data/seed.py`): `departments`, `students`, `courses`,
 `marks`. 50 students, 12 courses, 166 marks, generated from a fixed seed. The data has
@@ -140,6 +129,7 @@ src/       db.py, benchmark.py, prompts.py, llm.py, extract.py, grader.py, run_e
 app/       chat.py (Streamlit chatbot)
 tests/     grader, extractor, prompt and benchmark tests
 results/   final_run.jsonl, report.md, charts/
+docs/      architecture diagram, chatbot screenshot
 ```
 
 ## Limitations
