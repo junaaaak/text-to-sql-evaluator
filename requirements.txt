@@ -1,0 +1,7 @@
+ollama>=0.4
+sqlglot>=25.0
+pandas>=2.2
+tabulate>=0.9
+matplotlib>=3.8
+streamlit>=1.38
+pytest>=8.0
