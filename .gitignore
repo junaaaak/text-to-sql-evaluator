@@ -11,6 +11,9 @@ data/*.db
 # Raw run logs (the final report and charts are committed)
 results/runs/
 
+# Personal planning notes
+PLAN.md
+
 # Editors / OS
 .vscode/
 .idea/
